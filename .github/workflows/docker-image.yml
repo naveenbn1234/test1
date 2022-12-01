@@ -7,6 +7,13 @@ on:
     branches: [ "main" ]
 
 jobs:
+  example-job:
+    steps:
+      - name: Run build script
+        run: build.sh
+        shell: bash    
+
+jobs:
 
   build:
 
