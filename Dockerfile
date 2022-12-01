@@ -1,10 +1,9 @@
 FROM node:12.22-alpine
-WORKDIR /usr
-RUN ls -al
+RUN mkdir /app
+WORKDIR /app
 COPY . .
-RUN ls -al
 RUN cd
 RUN npm install --save
-WORKDIR /usr
+WORKDIR /app
 EXPOSE 8080
 CMD ["npm", "start"]
